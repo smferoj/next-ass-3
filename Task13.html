@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Text Color Example</title>
+  <style>
+    .highlight {
+      color: red;
+    }
+  </style>
+  <script>
+    function changeTextColor() {
+      var paragraphs = document.getElementsByClassName('highlight');
+      for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.color = 'red';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Change Text Color Example</h1>
+  <p class="highlight">This paragraph will have its text color changed.</p>
+  <p id="paragraph1">This paragraph will not be affected.</p>
+  <p class="highlight">This paragraph will also have its text color changed.</p>
+  <button onclick="changeTextColor()">Change Text Color</button>
+</body>
+</html>

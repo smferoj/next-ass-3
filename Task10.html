@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highlight Example</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+  <script>
+    function addHighlight() {
+      var paragraph = document.getElementById('myParagraph');
+      paragraph.classList.add('highlight');
+    }
+  </script>
+</head>
+<body>
+  <h1>Highlight Example</h1>
+  <button onclick="addHighlight()">Highlight Paragraph</button>
+  <p id="myParagraph">This is a paragraph.</p>
+</body>
+</html>

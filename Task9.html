@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation Example</title>
+  <script>
+    function validateForm() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+      var errorMessages = [];
+
+      // Name validation
+      if (name.trim() === '') {
+        errorMessages.push('Name is required.');
+      } else if (!/^[a-zA-Z]+$/.test(name)) {
+        errorMessages.push('Name should contain only letters.');
+      }
+
+      // Email validation
+      if (email.trim() === '') {
+        errorMessages.push('Email is required.');
+      } else if (!/\S+@\S+\.\S+/.test(email)) {
+        errorMessages.push('Email is not valid.');
+      }
+
+      // Password validation
+      if (password.trim() === '') {
+        errorMessages.push('Password is required.');
+      } else if (password.length < 8 || !/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/[0-9]/.test(password)) {
+        errorMessages.push('Password should have a minimum length of 8 characters and contain at least one uppercase letter, one lowercase letter, and one digit.');
+      }
+
+      // Confirm Password validation
+      if (confirmPassword.trim() === '') {
+        errorMessages.push('Confirm Password is required.');
+      } else if (password !== confirmPassword) {
+        errorMessages.push('Confirm Password does not match the Password.');
+      }
+
+      // Display error messages or submit form
+      if (errorMessages.length > 0) {
+        var errorMessage = errorMessages.join('\n');
+        alert(errorMessage);
+      } else {
+        alert('Form submitted successfully.');
+        // Uncomment the line below to submit the form
+        // document.getElementById('myForm').submit();
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Form Validation Example</h1>
+  <form id="myForm">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword">
+    </div>
+    <div>
+      <button type="button" onclick="validateForm()">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
