@@ -1,5 +1,5 @@
 
-// 3.a=========creates a function =========
+// 3.a=========creates a function (Numbers)=========
 function isPrime(number) {
     if (number <= 1) {
       return false;
@@ -14,7 +14,7 @@ function isPrime(number) {
     return true;
   }
 
- //3.b============implement the function =========
+ //3.b============implement the function(Numbers) =========
 
  function isPrime(number) {
     if (number <= 1) {

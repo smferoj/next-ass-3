@@ -1,4 +1,6 @@
-// 2.a=========creates a function =========
+
+
+// 2.a=========creates a function(Math Object) =========
 
 function squareRootOfSumOfSquares(numbers) {
     var sumOfSquares = 0;
@@ -11,7 +13,7 @@ function squareRootOfSumOfSquares(numbers) {
     return squareRoot;
   }
   
-//2.b============implement the function =========
+//2.b============implement the function (Math Object) =========
 
 var numbers = [1, 2, 3, 4, 5];
 

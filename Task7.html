@@ -1,4 +1,4 @@
-// 7. S Common Events=============
+ <!-- 7.========= JS Common Events============= -->
 
 <!DOCTYPE html>
 <html>
@@ -6,20 +6,17 @@
   <title>Event Handling Example</title>
   <script>
     window.addEventListener('DOMContentLoaded', function() {
-      // Event listener for click event
       document.addEventListener('click', function(event) {
         var x = event.clientX;
         var y = event.clientY;
         alert('Clicked at coordinates (x, y): ' + x + ', ' + y);
       });
 
-      // Event listener for keydown event
       document.addEventListener('keydown', function(event) {
         var keyCode = event.keyCode || event.which;
         alert('Key pressed. Key code: ' + keyCode);
       });
 
-      // Event listener for mouseover event
       var image = document.getElementById('myImage');
       image.addEventListener('mouseover', function() {
         image.src = 'path/to/another/image.jpg';

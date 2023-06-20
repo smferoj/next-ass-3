@@ -1,3 +1,6 @@
+
+// ==========14.AJAX Get Request:======
+
 function sendGETRequest() {
     var xhr = new XMLHttpRequest();
     var url = "https://api.example.com/data";

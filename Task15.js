@@ -1,3 +1,5 @@
+
+// ==========15.AJAX Post Request:============
 function sendPOSTRequest() {
     var xhr = new XMLHttpRequest();
     var url = "https://api.example.com/submit";

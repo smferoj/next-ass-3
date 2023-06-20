@@ -1,12 +1,10 @@
-// 5.a=========creates a function =========
+// 5.a=========creates a function (Navigator Object)=========
 
 function getBrowserInfo() {
   var userAgent = navigator.userAgent;
   var browserName;
   var browserVersion;
 
-
-  // Detect browser name and version
   if (userAgent.indexOf('Chrome') !== -1) {
     browserName = 'Chrome';
     browserVersion = userAgent.match(/Chrome\/(\d+)/)[1];
@@ -24,7 +22,7 @@ function getBrowserInfo() {
 
 };
 
- //5.b============implement the function =========
+ //5.b============implement the function (Navigator Object) =========
 
  function getBrowserInfo() {
     var userAgent = navigator.userAgent;

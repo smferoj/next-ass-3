@@ -1,23 +1,22 @@
 // 6. Geolocation=============
 
 function getUserLocation() {
-    if (navigator.geolocation) {
-    
-      navigator.geolocation.getCurrentPosition(
-        function (position) {
-          var latitude = position.coords.latitude;
-          var longitude = position.coords.longitude;
-  
-          console.log('Latitude:', latitude);
-          console.log('Longitude:', longitude);
-        },
-        function (error) {
-          console.log('Error retrieving location:', error);
-        }
-      );
-    } else {
-      console.log('Geolocation is not supported by this browser.');
-    }
-  }
+  if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
 
-  getUserLocation();
+        console.log('Latitude:', latitude);
+        console.log('Longitude:', longitude);
+      },
+      function (error) {
+        console.log('Error retrieving location:', error);
+      }
+    );
+  } else {
+    console.log('Geolocation is not supported by this browser.');
+  }
+}
+
+getUserLocation();

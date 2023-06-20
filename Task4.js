@@ -1,12 +1,12 @@
  
-// 4.a=========creates a function =========
+// 4.a=========creates a function x =========
 function openWindow(url, width, height) {
     var windowFeatures = `width=${width},height=${height}`;
   
     window.open(url, '_blank', windowFeatures);
   }
 
- //4.b============implement the function =========
+ //4.b============implement the function (Date Object) =========
  function openWindow(url, width, height) {
     var windowFeatures = `width=${width},height=${height}`;
   
